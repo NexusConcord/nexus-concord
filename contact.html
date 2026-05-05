@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Nexus Concord</title>
+<meta name="description" content="Begin a confidential conversation with Nexus Concord. Request an Opinion of Value or schedule an intro call.">
+<meta property="og:title" content="Contact — Nexus Concord">
+<meta property="og:description" content="Begin a confidential conversation with Nexus Concord. Request an Opinion of Value or schedule an intro call.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  @media (min-width: 968px) {
+    .contact-grid { grid-template-columns: 1.4fr 1fr !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"></span>
+      <span>Nexus Concord</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="process.html">Process</a></li>
+      <li><a href="industries.html">Industries</a></li>
+      <li><a href="insights.html">Insights</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary nav-cta">
+      Schedule a Conversation
+      <span class="btn-arrow">→</span>
+    </a>
+    <button class="menu-toggle" aria-label="Menu" id="menuToggle">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="about.html">About</a>
+  <a href="process.html">Process</a>
+  <a href="industries.html">Industries</a>
+  <a href="insights.html">Insights</a>
+  <a href="contact.html" class="btn btn-primary">Schedule a Conversation</a>
+</div>
+
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Begin a Conversation</span>
+    <h1>Confidential. No obligation.</h1>
+    <p class="lead">Every engagement starts with a private conversation about your business and what you're trying to accomplish. Tell us a bit about your situation and we'll be in touch within one business day.</p>
+  </div>
+</section>
+
+<section style="background: var(--white); border-top: 1px solid var(--border);">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1fr; gap: var(--space-lg); max-width: 1080px; margin: 0 auto;" class="contact-grid">
+
+      <div class="reveal">
+        <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Request an Opinion of Value</h2>
+        <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.9375rem;">All information is held in strict confidence. We respond to every inquiry within one business day.</p>
+
+        <div id="formSuccess" style="display: none; padding: 2.5rem; background: var(--cream); border: 1px solid var(--border); border-top: 3px solid var(--brass); text-align: center;">
+          <div style="font-family: 'Fraunces', serif; font-size: 1.5rem; color: var(--navy); margin-bottom: 1rem; font-weight: 500;">Thank you.</div>
+          <p style="color: var(--text-muted); line-height: 1.65; max-width: 40ch; margin: 0 auto;">Your inquiry has been received. We respond to every message within one business day &mdash; often sooner. All information is held in strict confidence.</p>
+        </div>
+
+        <div id="formError" style="display: none; padding: 1.25rem; background: #FEF2F2; border-left: 3px solid #B91C1C; margin-bottom: 1.5rem; color: #7F1D1D; font-size: 0.9375rem;">
+          Something went wrong. Please try again, or email <a href="mailto:reed@nexusconcord.com" style="color: #B91C1C; text-decoration: underline;">reed@nexusconcord.com</a> directly.
+        </div>
+
+        <form action="https://formspree.io/f/mykoweeq" method="POST" id="contactForm">
+          <div class="form-grid form-grid-2">
+            <div>
+              <label class="field-label" for="firstName">First Name <span class="required">*</span></label>
+              <input class="field-input" type="text" id="firstName" name="firstName" required>
+            </div>
+            <div>
+              <label class="field-label" for="lastName">Last Name <span class="required">*</span></label>
+              <input class="field-input" type="text" id="lastName" name="lastName" required>
+            </div>
+          </div>
+
+          <div class="form-grid" style="margin-top: 1.25rem;">
+            <div>
+              <label class="field-label" for="email">Email <span class="required">*</span></label>
+              <input class="field-input" type="email" id="email" name="email" required>
+            </div>
+          </div>
+
+          <div class="form-grid form-grid-2" style="margin-top: 1.25rem;">
+            <div>
+              <label class="field-label" for="phone">Phone</label>
+              <input class="field-input" type="tel" id="phone" name="phone">
+            </div>
+            <div>
+              <label class="field-label" for="company">Company</label>
+              <input class="field-input" type="text" id="company" name="company">
+            </div>
+          </div>
+
+          <div class="form-grid form-grid-2" style="margin-top: 1.25rem;">
+            <div>
+              <label class="field-label" for="revenue">Annual Revenue</label>
+              <select class="field-select" id="revenue" name="revenue">
+                <option value="">Select range</option>
+                <option value="under-1m">Under $1M</option>
+                <option value="1m-3m">$1M – $3M</option>
+                <option value="3m-5m">$3M – $5M</option>
+                <option value="5m-10m">$5M – $10M</option>
+                <option value="10m-25m">$10M – $25M</option>
+                <option value="over-25m">Over $25M</option>
+              </select>
+            </div>
+            <div>
+              <label class="field-label" for="timeline">Timeline to Sale</label>
+              <select class="field-select" id="timeline" name="timeline">
+                <option value="">Select timeline</option>
+                <option value="0-6">0 – 6 months</option>
+                <option value="6-12">6 – 12 months</option>
+                <option value="1-2y">1 – 2 years</option>
+                <option value="exploring">Just exploring</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid" style="margin-top: 1.25rem;">
+            <div>
+              <label class="field-label" for="industry">Industry</label>
+              <input class="field-input" type="text" id="industry" name="industry" placeholder="e.g. Construction, Government Contracting">
+            </div>
+          </div>
+
+          <div class="form-grid" style="margin-top: 1.25rem;">
+            <div>
+              <label class="field-label" for="message">Tell us about your situation</label>
+              <textarea class="field-textarea" id="message" name="message" placeholder="A few sentences about your business and what you're considering."></textarea>
+              <div class="field-help">All information is confidential. We're a fiduciary and respect that this is sensitive.</div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: 2rem; width: 100%; justify-content: center;">
+            Send Inquiry
+            <span class="btn-arrow">→</span>
+          </button>
+        </form>
+      </div>
+
+      <div class="reveal">
+        <div style="background: var(--cream); padding: 2.5rem 2rem; border: 1px solid var(--border); border-top: 3px solid var(--brass);">
+          <h3 style="margin-bottom: 1.5rem;">Other ways to reach us.</h3>
+
+          <div style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border);">
+            <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--brass); margin-bottom: 0.5rem;">Email</div>
+            <a href="mailto:reed@nexusconcord.com" style="font-family: 'Fraunces', serif; font-size: 1.125rem; color: var(--navy);">reed@nexusconcord.com</a>
+          </div>
+
+          <div style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border);">
+            <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--brass); margin-bottom: 0.5rem;">Schedule Directly</div>
+            <p style="font-size: 0.9375rem; color: var(--text-muted); margin-bottom: 1rem;">Prefer to skip the form? Book a 30-minute confidential call directly.</p>
+            <a href="https://calendly.com/reed-nexusconcord/30min" target="_blank" rel="noopener" class="btn btn-secondary" style="padding: 0.625rem 1.25rem; font-size: 0.875rem;">Schedule a Call</a>
+            <div style="font-size: 0.8125rem; color: var(--text-muted); margin-top: 0.75rem; font-style: italic;">30-minute confidential conversation.</div>
+          </div>
+
+          <div>
+            <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--brass); margin-bottom: 0.5rem;">Office</div>
+            <p style="font-size: 0.9375rem; color: var(--text-muted); line-height: 1.6;">Indianapolis, Indiana<br>Serving Indiana &amp; the Midwest</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(164, 126, 59, 0.05); border-left: 3px solid var(--brass);">
+          <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.65; margin: 0;"><strong style="color: var(--navy);">Confidentiality.</strong> Nexus Concord operates under strict confidentiality protocols. No information is shared with potential buyers or third parties without your written authorization. All initial conversations are protected.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="logo-mark"></span><span>Nexus Concord</span></a>
+        <p>Sell-side M&amp;A advisory for Indiana's lower middle market. A flat 5% success fee, principal-led from first call to close.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Firm</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="insights.html">Insights</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="contact.html">Opinion of Value</a></li>
+          <li><a href="insights.html">Market Commentary</a></li>
+          <li><a href="disclosure.html">Disclosure</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:reed@nexusconcord.com">reed@nexusconcord.com</a></li>
+          <li><a href="contact.html">Schedule a Conversation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Nexus Concord LLC. All rights reserved.</div>
+      <div class="footer-legal">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="disclosure.html">Disclosure</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); io.unobserve(entry.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuToggle?.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+  // Formspree AJAX submission — keeps user on page after submitting
+  const form = document.getElementById('contactForm');
+  const successMsg = document.getElementById('formSuccess');
+  const errorMsg = document.getElementById('formError');
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errorMsg.style.display = 'none';
+
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnHTML = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending&hellip;';
+      submitBtn.style.opacity = '0.6';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.style.display = 'none';
+          successMsg.style.display = 'block';
+          successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          form.reset();
+        } else {
+          throw new Error('Submission failed');
+        }
+      } catch (err) {
+        errorMsg.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHTML;
+        submitBtn.style.opacity = '1';
+        errorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
